@@ -1,0 +1,11 @@
+.idea
+plagiarism-checker-env
+.env
+*.pyc
+.pypirc
+setup.cfg
+setup.py
+publish.bat
+dist
+MANIFEST
+__pycache__

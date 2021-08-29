@@ -1,5 +1,5 @@
 .idea
-plagiarism-checker-env
+plagiarism-checker-backend-env
 .env
 *.pyc
 .pypirc

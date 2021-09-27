@@ -1,7 +1,7 @@
 import json
 import requests
 import re
-
+import os
 from .consts import Consts
 from .commandfailederror import CommandFailedError
 from .logintoken import LoginToken
@@ -44,7 +44,7 @@ class CopyleaksCloud:
             'url': f'{url}',
             'properties': {
                 'developerPayload': f'{user_id}',
-                'sandbox': True,
+                'sandbox': os.environ.get("COPYLEAKS_SANDBOX_ENVIRONMENT"),
                 'webhooks': {
                     'status': 'https://plagiarism-checker-listener.herokuapp.com/webhook/{STATUS}/%s' % scan_id
                 },
